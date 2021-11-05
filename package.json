@@ -1,0 +1,22 @@
+{
+  "name": "dndcollab",
+  "version": "1.0.0",
+  "main": "src/app.ts",
+  "repository": "git@github.com:benalittlewhile/dndcollab.git",
+  "author": "ben <isieldor@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"TODO: Write tests\" && exit 1",
+    "tsc": "tsc && tsc-alias",
+    "start": "nodemon --ignore build/ -e ts,json --exec \"tsc && tsc-alias --silent && node build/app.js\"",
+    "dorun": "tsc && tsc-alias && node build/app.js"
+  },
+  "dependencies": {
+    "@types/node": "^16.11.6",
+    "nodemon": "^2.0.14",
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "tsc-alias": "^1.4.0"
+  }
+}
