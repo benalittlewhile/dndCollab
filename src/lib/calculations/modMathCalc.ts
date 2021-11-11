@@ -27,6 +27,5 @@ export function asModifier(abilityScore: number) {
     for (let i = 1; i < abilityScore; i = i + 2) {
       futureMod += 1;
     }
-    console.log("Here's our ability modifier: "+ futureMod);
   }
 }
