@@ -20,6 +20,7 @@ export class Character implements CharacterTypes {
   wis: number;
   cha: number;
   passivePerception: number;
+  background: string;
   proficiencies: string[];
   skills: string[];
   feats: string[];
@@ -31,7 +32,7 @@ export class Character implements CharacterTypes {
   ideals: string[];
   bonds: string[];
   flaws: string[];
-  features: string[]
+  features: string[];
   attacks: string[];
   spellsKnown: string[];
 
@@ -55,6 +56,7 @@ export class Character implements CharacterTypes {
     wis: number = -1,
     cha: number = -1,
     passivePerception: number = -1,
+    background: string = "background",
     proficiencies: string[] = [],
     skills: string[] = [],
     feats: string[] = [],
@@ -89,6 +91,7 @@ export class Character implements CharacterTypes {
     this.wis = wis;
     this.cha = cha;
     this.passivePerception = passivePerception;
+    this.background = background;
     this.proficiencies = proficiencies;
     this.skills = skills;
     this.feats = feats;
@@ -132,5 +135,4 @@ export class Character implements CharacterTypes {
   public getRace(): string {
     return this.race;
   }
-
 }

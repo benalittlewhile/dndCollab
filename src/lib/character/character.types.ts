@@ -18,6 +18,7 @@ export interface CharacterTypes {
     wis: number
     cha: number
     passivePerception: number
+    background: string
     proficiencies: string[]
     skills: string[]
     feats: string[]
