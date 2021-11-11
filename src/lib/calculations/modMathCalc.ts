@@ -15,9 +15,11 @@ export class Modifiers {
     this.chaMod = 0;
   }
 }
+
 //requires the ability score to calculate the modifier
 export function asModifier(abilityScore: number) {
-  var futureMod = -5;
+  let futureMod = -5;
+  abilityScore = Math.floor(abilityScore);
   if (abilityScore < 1 || abilityScore > 30) {
     console.log("That's not a legal ability score in 5e.");
   } else {
@@ -25,5 +27,6 @@ export function asModifier(abilityScore: number) {
     for (let i = 1; i < abilityScore; i = i + 2) {
       futureMod += 1;
     }
+    console.log("Here's our ability modifier: "+ futureMod);
   }
 }
