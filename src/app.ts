@@ -1,4 +1,5 @@
 import { Person, sayHello, aNumber } from "lib/exampleModule";
+import { Character } from "lib/character";
 
 // console.log("Hello World");
 
