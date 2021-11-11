@@ -21,6 +21,7 @@ export class Character implements CharacterTypes {
   cha: number;
   passivePerception: number;
   background: string;
+  hitDie: string;
   proficiencies: string[];
   skills: string[];
   feats: string[];
@@ -57,6 +58,7 @@ export class Character implements CharacterTypes {
     cha: number = -1,
     passivePerception: number = -1,
     background: string = "background",
+    hitDie: string = "1d1",
     proficiencies: string[] = [],
     skills: string[] = [],
     feats: string[] = [],
@@ -92,6 +94,7 @@ export class Character implements CharacterTypes {
     this.cha = cha;
     this.passivePerception = passivePerception;
     this.background = background;
+    this.hitDie = hitDie;
     this.proficiencies = proficiencies;
     this.skills = skills;
     this.feats = feats;
