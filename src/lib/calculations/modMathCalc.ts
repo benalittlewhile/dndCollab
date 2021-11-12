@@ -18,13 +18,14 @@ export class Modifiers {
 
 //requires the ability score to calculate the modifier
 export function asModifier(abilityScore: number) {
-  let futureMod = -5;
-  abilityScore = Math.floor(abilityScore);
+  //abilityScore = Math.floor(abilityScore);
   if (abilityScore < 1 || abilityScore > 30) {
     console.log("That's not a legal ability score in 5e.");
+    return null;
   } else {
     //modifier incriments by 2 from 1 to 20 (30 for gods)
-    futureMod = Math.floor(abilityScore/2) - 5;
-    console.log("Number works: " + futureMod);
+    let futureMod = Math.floor(abilityScore/2) - 5;
+    return futureMod;
     }
+
 }
