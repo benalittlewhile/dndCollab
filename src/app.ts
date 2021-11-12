@@ -12,6 +12,3 @@ function whatIsTheNumber(): number {
 }
 
 console.log("the number is " + whatIsTheNumber());
-
-import { asModifier } from "lib/calculations";
-console.log("baby " + asModifier (10.3333));
