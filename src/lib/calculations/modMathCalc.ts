@@ -24,8 +24,7 @@ export function asModifier(abilityScore: number) {
     console.log("That's not a legal ability score in 5e.");
   } else {
     //modifier incriments by 2 from 1 to 20 (30 for gods)
-    for (let i = 1; i < abilityScore; i = i + 2) {
-      futureMod += 1;
+    futureMod = Math.floor(abilityScore/2) - 5;
+    console.log("Number works: " + futureMod);
     }
-  }
 }

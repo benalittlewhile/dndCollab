@@ -1,5 +1,4 @@
 import { Person, sayHello, aNumber } from "lib/exampleModule";
-import { Character } from "lib/character";
 
 // console.log("Hello World");
 
@@ -13,3 +12,6 @@ function whatIsTheNumber(): number {
 }
 
 console.log("the number is " + whatIsTheNumber());
+
+import { asModifier } from "lib/calculations";
+asModifier(20);
