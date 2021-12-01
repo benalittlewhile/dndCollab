@@ -2,7 +2,10 @@
   "human": {
     "size": "medium",
     "baseMoveSpeed": 30,
-    "languages": "common",
+    "languages": {
+      "racial": "common",
+      "elective": 1
+    },
     "extraLanguages": 1,
     "abilityMods": {
       "str": 1,
