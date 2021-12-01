@@ -1,0 +1,16 @@
+{
+  "human": {
+    "size": "medium",
+    "baseMoveSpeed": 30,
+    "languages": "common",
+    "extraLanguages": 1,
+    "abilityMods": {
+      "str": 1,
+      "dex": 1,
+      "int": 1,
+      "con": 1,
+      "wis": 1,
+      "cha": 1
+    }
+  }
+}
