@@ -1,5 +1,23 @@
-{
-  "human": {
+[
+  {
+    "name": "human",
+    "size": "medium",
+    "baseMoveSpeed": 30,
+    "languages": {
+      "racial": ["common"],
+      "elective": 1
+    },
+    "abilityMods": {
+      "str": 1,
+      "dex": 1,
+      "int": 1,
+      "con": 1,
+      "wis": 1,
+      "cha": 1
+    }
+  },
+  {
+    "name": "dwarf",
     "size": "medium",
     "baseMoveSpeed": 30,
     "languages": {
@@ -15,4 +33,4 @@
       "cha": 1
     }
   }
-}
+]

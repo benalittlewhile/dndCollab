@@ -1,3 +1,4 @@
+import importRaces from "lib/character/race/raceParser";
 import { Person, sayHello, aNumber } from "lib/exampleModule";
 
 // console.log("Hello World");
@@ -12,3 +13,6 @@ function whatIsTheNumber(): number {
 }
 
 console.log("the number is " + whatIsTheNumber());
+
+let races = importRaces();
+console.log(races);
