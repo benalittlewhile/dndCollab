@@ -1,6 +1,5 @@
 import importRaces from "lib/character/race/raceParser";
 import { Person, sayHello, aNumber } from "lib/exampleModule";
-
 // console.log("Hello World");
 
 let thisPerson = new Person();
