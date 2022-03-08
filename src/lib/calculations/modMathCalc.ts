@@ -60,6 +60,16 @@ export function calculatePassivePerception(
   return futurePassivePerception;
 }
 
+export function calculateMaxHitPoints(
+  level: number,
+  hitDie: number,
+  conMod: number
+) {
+  let maxHitPoints = 0;
+  maxHitPoints = hitDie + conMod * level;
+  return maxHitPoints;
+}
+
 export function calculateArmorClass(
   dexMod: number,
   profBonus: number = 0,
