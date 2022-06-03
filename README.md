@@ -1,3 +1,38 @@
+# "The Svelte one"
+
+My idea with this repo is to create a mockup/basic version of an app in svelte,
+then have two of my mentees try to recreate the site in react as a way to learn
+said react. I've included the original readme for the template I'm using below
+to answer some architecture questions.
+
+## Installation and usage
+
+Requirements:
+
+- [nodejs](https://nodejs.org/en/) - I'd recommend the latest version over
+  stable
+- [an npm-compatible package manager](https://yarnpkg.com/) - I use yarn, and
+  I'll be writing docs as if you are too, but npm or other options are also
+  available.
+- git
+
+Installation:  (in your finest terminal)
+1. Navigate to your favorite repo folder
+2. Clone the repository  
+   `git clone git@github.com:benalittlewhile/dndCollab.git`
+3. Change to the newly cloned folder  
+   `cd dndCollab`
+4. Check out the svelte version of the project  
+   `git checkout svelteMock`
+5. Install package dependencies  
+   `yarn` or `npm install` or your package manager's equivalent
+6. Start the dev server  
+   `yarn dev` or `npm run dev`
+7. Open up your browser and navigate to the localhost:port link shown on the
+   screen. You should see the app!
+8. Hackin'
+
+
 # Svelte + TS + Vite
 
 This template should help get you started developing with Svelte and TypeScript in Vite.
@@ -43,6 +78,6 @@ If you have state that's important to retain within a component, consider creati
 ```ts
 // store.ts
 // An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+import { writable } from "svelte/store";
+export default writable(0);
 ```
