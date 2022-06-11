@@ -6,7 +6,7 @@
     NumField,
     StringField,
     StringFieldOptional,
-    Field
+    Field,
   } from "./types/character";
 
   let addModalOpen = false;
@@ -43,22 +43,28 @@
       value: 168,
     } as NumField;
   };
-  
+
   const addFieldAndCloseModal = (newField: Field) => {
-    const idFixedField = {...newField, id: nextId};
+    const idFixedField = { ...newField, id: nextId };
     nextId = nextId + 1;
     newbert.fields = [...newbert.fields, idFixedField];
     addModalOpen = false;
-  }
+  };
 </script>
 
 <main>
   <h1>Hello Wrld</h1>
-  <h2 on:click={() => {addModalOpen = !addModalOpen}}>{newbert.name}</h2>
+  <h2
+    on:click={() => {
+      addModalOpen = !addModalOpen;
+    }}
+  >
+    {newbert.name}
+  </h2>
   <div class="grid grid-cols-2">
     {#each newbert.fields as field (field.id)}
       <div
-        class="grid grid-cols-2 mx-4 my-2 p-3 bg-slate-500 rounded-md"
+        class="mx-4 my-2 grid grid-cols-2 rounded-md bg-slate-500 p-3"
         transition:fly={{ y: 200, duration: 350 }}
       >
         <h3 class="text-left">{field.label}</h3>
@@ -86,9 +92,10 @@
   <!-- <div class="flex items-center justify-center mt-6"> -->
   <div class="context-grid">
     {#if !addModalOpen}
-      <div class="bg-slate-600 rounded-full w-fit m-auto "
+      <div
+        class="m-auto w-fit rounded-full bg-slate-600 "
         out:slide
-        in:fly={{y:100, delay:500}}
+        in:fly={{ y: 100, delay: 500 }}
       >
         <img
           src={plus}
@@ -96,22 +103,26 @@
           on:click={() => {
             addModalOpen = !addModalOpen;
           }}
-          class="plus-button w-[30px] m-auto"
+          class="plus-button m-auto w-[30px]"
         />
       </div>
       <!-- on:click={handleClick} -->
     {:else}
       <div
-      class="dropdown bg-slate-500 w-1/4 min-h-[30px] m-auto rounded-md py-1
-      z-20"
-        in:scale={{duration: 500}}
-        out:scale={{duration:500}}
+        class="dropdown z-20 m-auto min-h-[30px] w-1/4 rounded-md bg-slate-500
+      py-1"
+        in:scale={{ duration: 500 }}
+        out:scale={{ duration: 500 }}
       >
         {#each newbert.fields as field}
           <h3
-          class="rounded-md bg-slate-600 m-2 p-1"
-          on:click={() => {addFieldAndCloseModal(field)}}
-          >{field.label}</h3>
+            class="m-2 rounded-md bg-slate-600 p-1"
+            on:click={() => {
+              addFieldAndCloseModal(field);
+            }}
+          >
+            {field.label}
+          </h3>
         {/each}
       </div>
     {/if}
